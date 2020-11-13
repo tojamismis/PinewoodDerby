@@ -34,7 +34,24 @@ namespace PinewoodDerby.PinewoodCore
     {
       var group = race.CurrentRaceGroup;
       var cars = CalculateCarList(group);
-      var results = race.Results.Where(r => cars.Contains(r.CarId));
+      var results = race.Results.Where(r => cars.Contains(r.CarId))
+        .GroupBy(c => c.CarId)
+        .Select(r => new { CarId = r.Key, Count = r.Count() });
+      var max = results.Max(c => c.Count);
+      IEnumerable<int> carIds;
+      if (max < race.CurrentHeat)
+      {
+        carIds = cars.Take(race.NumberOfTracks);
+      }
+      else
+      {
+        carIds = results.Where(c => c.Count < max).Take(race.NumberOfTracks).Select(c => c.CarId);
+      }
+      if(carIds.Count() == 0)
+      {
+        var nextGroup = 
+      }
+
     }
 
     private List<int> CalculateCarList(int currentGroup)

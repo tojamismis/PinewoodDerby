@@ -109,6 +109,32 @@ namespace PinewoodDerby.PinewoodCore
         }
       }
     }
+
+    public List<Result> CreateNewHeat(IList<int> carIds)
+    {
+      lock (Heats)
+      {
+        var newHeatId = Heats.Count;
+        Heat newHeat = new Heat() { Id = newHeatId };
+
+        lock (Results)
+        {
+          foreach (var carId in carIds)
+          {
+            var result = new Result()
+            {
+              CarId = carId,
+              Heat = newHeatId,
+              Id = Results.Count,
+              RaceId = this.RaceId
+            };
+            newHeat.Results.Add(result.Id);
+            Results.Add(result);
+          }
+        }
+      }
+      return Results.Where(r => r.Track == -1).ToList();
+    }
   }
 }
 

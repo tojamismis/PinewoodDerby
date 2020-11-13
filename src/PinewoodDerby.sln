@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinewoodCore", "PinewoodCore\PinewoodCore.csproj", "{F1534950-1975-4C41-8BC5-0AEA53640676}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.132
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PinewoodCore", "PinewoodCore\PinewoodCore.csproj", "{F1534950-1975-4C41-8BC5-0AEA53640676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinewoodRepository.SqlLite", "PinewoodRepositorySqlLite\PinewoodRepository.SqlLite.csproj", "{6366B1E9-C9A0-40FD-9D0E-4F1CED16F665}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{F1534950-1975-4C41-8BC5-0AEA53640676}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1534950-1975-4C41-8BC5-0AEA53640676}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1534950-1975-4C41-8BC5-0AEA53640676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6366B1E9-C9A0-40FD-9D0E-4F1CED16F665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6366B1E9-C9A0-40FD-9D0E-4F1CED16F665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6366B1E9-C9A0-40FD-9D0E-4F1CED16F665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6366B1E9-C9A0-40FD-9D0E-4F1CED16F665}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5378B64-09F3-4D7B-B98E-CAD958F9994F}
 	EndGlobalSection
 EndGlobal

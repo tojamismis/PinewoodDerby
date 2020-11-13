@@ -9,7 +9,7 @@ namespace PinewoodDerby.PinewoodCore
 		public int RaceId { get; set; }
 		public int Heat { get; set; }
 		public double Time { get; set; }
-		public int Track { get; set; }
+		public int Track { get; set; } = -1;
 		public int CarId { get; set; }
 		public int Id { get; set; }
 	}
